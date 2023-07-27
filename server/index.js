@@ -5,6 +5,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import postRoutes from './routes/posts.js';
+import userRoutes from './routes/users.js';
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use('/posts', postRoutes);
+app.use('/user', userRoutes);
 
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
