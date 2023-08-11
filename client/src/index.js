@@ -8,9 +8,9 @@ import { configureStore } from '@reduxjs/toolkit';
 import { reducers } from './reducers';
 import App from './App';
 import './index.css';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-
-
+const theme = createTheme();
 // const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 const store = configureStore({
@@ -22,11 +22,13 @@ const store = configureStore({
 
 ReactDOM.render(
     <>
+        <ThemeProvider theme={theme}>
 
-        <Provider store={store}>
-            <App />
-        </Provider>
+            <Provider store={store}>
+                <App />
+            </Provider>
 
+        </ThemeProvider>
     </>,
     document.getElementById('root'),
 );

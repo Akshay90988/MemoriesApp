@@ -2,29 +2,29 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles((theme) => ({
     paper: {
-        marginTop: 80,
+        marginTop: theme.spacing(8),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: 20,
+        padding: theme.spacing(2),
     },
     root: {
         '& .MuiTextField-root': {
-            margin: 10,
+            margin: theme.spacing(1),
         },
     },
     avatar: {
-        margin: 10,
-        backgroundColor: '#9c27bO',
+        margin: theme.spacing(1),
+        backgroundColor: theme.palette.secondary.main,
     },
     form: {
         width: '100%',
-        marginTop: 30,
+        marginTop: theme.spacing(3),
     },
     submit: {
-        margin: (30, 0, 20),
+        margin: theme.spacing(3, 0, 2),
     },
     googleButton: {
-        marginBottom: 20,
+        marginBottom: theme.spacing(2),
     },
 }));
